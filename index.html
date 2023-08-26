@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <title>Hogwarts</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <br>
+  <br>
+  <div class="centro">
+    <img src="imgs/escrita.png" class="img-fluid" width="500" id="titulo">
+  </div>
+  <br>
+  <br>
+  <div class="container-fluid">
+    <div class="col-md-8" id="fundo">
+
+      <form id="form" action="ficha.html">
+        <div class="row">
+          <!--Utilizei as opções automáticas do bootstrap para fazer essa parte do HTML-->
+
+          <!--Queria muito fazer um formulário que levasse a ficha do estudante em outra página-->
+          <!--Infezlimente não aprendemos ainda isso e não teria como fazer-->
+          <!--Pesquisando um pouco descobri o LocalStorage, pesquisei sobre e achei ele fácil-->
+          <!--Utilizei o LocalStorage para armazenar os dados e os sites que utilizei como fonte foram:-->
+          <!--https://blog.fellyph.com.br/tutoriais/utilizando-localstorage-para-armazenar-dados-no-device/-->
+          <!--https://www.linkedin.com/pulse/falando-de-html-css-e-javascript-localstorage-paulo-marinato#:~:text=O%20LocalStorage%20armazena%20apenas%20strings%2C%20portanto%2C%20ao%20trabalhar,isso%20usando%20os%20m%C3%A9todos%20JSON.stringify%20e%20JSON.parse%2C%20respectivamente.-->
+          <!--No segundo link descobri sobre serem apenas dados String armazenados nele, então depois tive que converter os dados na página da ficha.-->
+
+          <!--Além disso, utilizei alguns vídeos base para formar a estética do meu formulário:-->
+          <!--https://www.youtube.com/watch?v=hlwlM4a5rxg-->
+
+          <div class="col-sm-6">
+            <!--Inserir matrícula-->
+            <div class="mb-3">
+              <label for="matricula" class="form-label">Matrícula</label>
+              <input type="text" class="form-control" name="matricula" id="matricula" aria-describedby="helpId"
+                placeholder="escreva sua matrícula">
+              <small id="avisomatricula"></small>
+            </div>
+
+            <!--Inserir nome-->
+            <div class="mb-3">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" class="form-control" name="nome" id="nome" aria-describedby="helpId"
+                placeholder="escreva seu nome">
+              <small id="avisonome"></small>
+            </div>
+
+            <!--Inserir email-->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="text" class="form-control" name="email" id="email" aria-describedby="helpId"
+                placeholder="escreva seu endereço de e-mail">
+              <small id="avisoemail"></small>
+            </div>
+
+            <!--Criar senha-->
+            <div class="mb-3">
+              <label for="senha" class="form-label">Senha </label>
+              <input type="password" class="form-control" name="senha" id="senha" placeholder="escreva sua senha">
+              <small id="avisosenha"></small>
+            </div>
+
+            <!--Inserir data de nascimento-->
+            <div class="mb-3">
+              <label for="data" class="form-label">Data de Nascimento</label>
+              <input type="text" class="form-control" name="data" id="data" aria-describedby="helpId"
+                placeholder="DD/MM/YYYY">
+              <small id="avisodata"></small>
+            </div>
+            
+            <!--Inserir horário do dia predileto-->
+            <!--Se a pessoa colocar um horário a noite na página da ficha aparecerá um Boa Noite, como se ela estivesse lendo naquele horário-->
+            <!--A mesma coisa acontecerá para manhã e tarde-->
+            <div class="mb-3">
+              <label for="horario" class="form-label">Horário do dia favorito </label>
+              <input type="text" class="form-control" name="horario" id="horario" aria-describedby="helpId"
+                placeholder="00:00 à 23:59">
+              <small id="avisohorario"></small>
+            </div>
+          </div>
+          <div class="col-sm-6">
+
+            <!--Inserir a casa que faz parte (RADIO BUTTOM)-->
+
+            <label for="opcoes" class="form-label">Casa</label>
+            <div class="row">
+                <div class="col">
+                  <div class="col">
+                    <div class="row">
+                      <img src="imgs/grifinoria.png" class="img-fluid" width="30" id="casas">
+                    </div>
+                    <div class="row">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="opcoes" id="op1" value="1">
+                        <label class="form-check-label" for="op1">Grifinória</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="col">
+                    <div class="row">
+                      <img src="imgs/lufalufa.png" class="img-fluid" width="30" id="casas">
+                    </div>
+                    <div class="row">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="opcoes" id="op2" value="2">
+                        <label class="form-check-label" for="op2">Lufa-lufa</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="col">
+                    <div class="row">
+                      <img src="imgs/sonserina.png" class="img-fluid" width="30" id="casas">
+                    </div>
+                    <div class="row">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="opcoes" id="op3" value="3">
+                        <label class="form-check-label" for="op3">Sonserina</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="col">
+                    <div class="row">
+                      <img src="imgs/corvinal.png" class="img-fluid" width="30" id="casas">
+                    </div>
+                    <div class="row">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="opcoes" id="op4" value="4">
+                        <label class="form-check-label" for="op4">Corvinal</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <small id="avisocasas"></small>
+            </div>
+
+            <!--Inserir Notas (REAL) de cada matéria-->
+            <div class="mb-3">
+              <label for="materia" class="form-label">Notas (INSIRA AS NOTAS NA ORDEM DOS NÚMEROS)</label>
+              <div class="row">
+              <input type="text" class="form-control" name="materia" aria-describedby="helpId" placeholder="1.Feitiços">
+              <input type="text" class="form-control" name="materia" aria-describedby="helpId" placeholder="2.Trato das Criaturas Mágicas">
+            </div>
+            <div class="row">
+              <input type="text" class="form-control" name="materia" aria-describedby="helpId" placeholder="3.Poções">
+              <input type="text" class="form-control" name="materia" aria-describedby="helpId" placeholder="4.Defesa contras as Artes das Trevas">
+            </div>
+            <div class="row">
+              <input type="text" class="form-control" name="materia" aria-describedby="helpId" placeholder="5.Herbologia">
+              <input type="text" class="form-control" name="materia" aria-describedby="helpId" placeholder="6.Transfiguração">
+             </div> 
+              
+              <small id="avisonotas"></small>
+            </div>
+
+            <!--Pontos da casa para o torneio das casas-->
+            <div class="mb-3">
+              <label for="pontos" class="form-label">Com quantos pontos sua casa está no torneio?</label>
+              <input type="text" class="form-control" name="pontos" id="pontos" aria-describedby="helpId" placeholder="escreva os pontos">
+              <small id="avisopontos"></small>
+            </div>
+
+            <!--Descrição sobre si mesmo/autobiografia-->
+            <div class="mb-3">
+              <label for="bio" class="form-label">Biografia</label>
+              <textarea class="form-control" id="bio" rows="3"></textarea>
+              <small id="avisobio"></small>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary" id="btenviar">Enviar</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+
+  <!--JAVASCRIPT-->
+  <script src="js/form.js" type="text/JavaScript"></script>
+</body>
+
+</html>

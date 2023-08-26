@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <title>Ficha em Hogwarts</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/ficha.css">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container-fluid" id="fundo">
+    <br>
+    <div class="centro">
+      <img src="imgs/ficha.png" class="img-fluid" width="70%">
+    </div>
+
+    <br>
+    <div class="row">
+      <div class="col-sm-7">
+        <div class="row">
+          <div class="col-sm-8">
+            <p id="nome"></p>
+            <p id="datanasc"></p>
+            <p id="matricula"></p>
+          </div>
+          <div class="col-sm-4">
+            <p id="ano"></p>
+            <p id="casa"></p>
+          </div>
+        </div>
+        <p>Biografia:</p>
+        <p class="texto" id="biografia"></p>
+      </div>
+      <div class="col-sm-4">
+        <img id="logocasa" class="img-fluid" width="360">
+      </div>
+    </div>
+    <br>
+    <p class="texto" id="fraseboasvindas"></p>
+    <br>
+    <!--Notas baseadas no universo de hogwarts-->
+    <p>Abaixo poderá ver seu resultado nas matérias e a casa ganhadora da Taça das Casas! As notas de aprovação são: ótimo, excede as expectativas e aceitável. As notas de reprovação são: passável, deplorável, trasgo.</p>
+    <div class="row">
+      <div class="col-sm-6">
+        <p>Notas:</p>
+        <ul>
+          <li id="feit">Feitiços:</li>
+          <li id="tdcm">T. das C. M.:</li>
+          <li id="poc">Poções:</li>
+          <li id="dcadt">D. C. A. das T.:</li>
+          <li id="herb">Herbologia:</li>
+          <li id="transf">Transfiguração:</li>
+        </ul>
+        <p>Estado:</p>
+        <ul id="estado">
+          <li id="f">Feitiços: </li>
+          <li id="c">T. das C. M.: </li>
+          <li id="p">Poções:</li>
+          <li id="d">D. C. A. das T.:</li>
+          <li id="h">Herbologia:</li>
+          <li id="t">Transfiguração:</li>
+        </ul>
+      </div>
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col">
+            <p><b>Vencedor!</b></p>
+          <img id="1lugar" class="img-fluid" width="140">
+          <p id="pontos1">pontos:</p>
+          <br>
+          </div>
+          <div class="col">
+            <p>2º Lugar</p>
+          <img id="2lugar" class="img-fluid" width="140">
+          <p id="pontos2">pontos:</p>
+          <br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p>3º Lugar</p>
+          <img id="3lugar" class="img-fluid" width="140">
+          <p id="pontos3">pontos:</p>
+          <br>
+          </div>
+          <div class="col">
+            <p>4º Lugar</p>
+          <img id="4lugar"  class="img-fluid" width="140">
+          <p id="pontos4">pontos:</p>
+          <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <br>
+  <br>
+  <br>
+  <script src="js/ficha.js" type="text/JavaScript"></script>
+
+
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+
+  <!--JAVASCRIPT-->
+
+</body>
+
+</html>
